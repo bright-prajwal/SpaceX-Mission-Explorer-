@@ -1,0 +1,10 @@
+backend/.env
+backend/node_modules/
+backend/npm-debug.log*
+backend/.pnpm-debug.log*
+backend/dist
+backend/.DS_Store
+
+frontend/node_modules/
+
+.vscode/
