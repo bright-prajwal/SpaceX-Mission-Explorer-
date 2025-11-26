@@ -103,6 +103,7 @@ GET /api/apod/range?start_date=2024-01-01&end_date=2024-01-10
 ![alt text](image-3.png)
 ![alt text](image-4.png)
 ![alt text](image-5.png)
+
 ---
 
 ## **Done!**
