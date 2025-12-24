@@ -8,7 +8,6 @@ const errorHandler = require('./middlewares/errorHandler');
 const { getCacheStats } = require('./utils/cache');
 
 const app = express();
-const cors = require("cors"); //new for devloyment
 
 app.use(helmet());
 app.use(cors());

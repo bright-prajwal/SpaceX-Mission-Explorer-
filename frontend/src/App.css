@@ -369,7 +369,6 @@ body {
   transform: none;
 }
 
-/* Maintain aspect ratio for videos & images before load */
 .aspect-16x9 {
   position: relative;
   width: 100%;
@@ -385,15 +384,12 @@ body {
 }
 
 
-/* subtle stagger by order */
 .masonry-item { animation-delay: .02s; }
 .masonry-item:nth-child(2){ animation-delay:.06s }
 .masonry-item:nth-child(3){ animation-delay:.10s }
-/* …repeat a few if you like */
 
 
 
-/* responsive Masonry */
 @media (max-width: 1200px) {
   .masonry {
     column-count: 3;
