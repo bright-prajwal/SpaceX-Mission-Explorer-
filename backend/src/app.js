@@ -8,11 +8,18 @@ const errorHandler = require('./middlewares/errorHandler');
 const { getCacheStats } = require('./utils/cache');
 
 const app = express();
+const cors = require("cors"); //new for devloyment
 
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
+
+
+app.use(cors({   //new for deployment
+  origin: "*"
+}));
+
 
 const limiter = rateLimit({
   windowMs: 60 * 1000,
