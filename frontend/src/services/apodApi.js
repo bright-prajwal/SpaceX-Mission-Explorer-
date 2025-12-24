@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const BASE_URL = "http://localhost:5001/api/apod";
-const BASE_URL = "https://your-backend.onrender.com/api/apod";
+const BASE_URL = "https://nasa-apod-backend-t9ct.onrender.com/api/apod";
 
 
 async function http(path) {
