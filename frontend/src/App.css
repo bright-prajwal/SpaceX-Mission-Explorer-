@@ -307,6 +307,92 @@ body {
   color: inherit;
 }
 
+
+
+/* --- reveal animation --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(4px);
+  transition: opacity .6s ease, transform .6s ease, filter .6s ease;
+}
+.reveal--in {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* image/video placeholders for smooth load */
+.media-loading {
+  filter: blur(10px) saturate(90%);
+  transform: scale(1.02);
+  transition: filter .5s ease, transform .5s ease;
+}
+.media-loaded {
+  filter: none;
+  transform: none;
+}
+
+/* optional: preserve aspect for iframes before load */
+.aspect-16x9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.aspect-16x9 > iframe, .aspect-16x9 > img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+
+/* === Fade-in Reveal Animation === */
+.reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  filter: blur(5px);
+  transition: opacity .6s ease, transform .6s ease, filter .6s ease;
+}
+.reveal--in {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* --- Lazy Load Blur-up --- */
+.media-loading {
+  filter: blur(12px);
+  transform: scale(1.03);
+  transition: filter .7s ease, transform .7s ease;
+}
+.media-loaded {
+  filter: none;
+  transform: none;
+}
+
+/* Maintain aspect ratio for videos & images before load */
+.aspect-16x9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.aspect-16x9 > img,
+.aspect-16x9 > iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* subtle stagger by order */
+.masonry-item { animation-delay: .02s; }
+.masonry-item:nth-child(2){ animation-delay:.06s }
+.masonry-item:nth-child(3){ animation-delay:.10s }
+/* …repeat a few if you like */
+
+
+
 /* responsive Masonry */
 @media (max-width: 1200px) {
   .masonry {
